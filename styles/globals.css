@@ -13,6 +13,26 @@ a {
 
 * {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.glitched {
+	text-shadow: 2px 0px 0px #14b8a6, 4px 0px 0px #f43f5e;
+}
+
+html {
+	color-scheme: dark;
+}
+body {
+	color: white;
+	background: black;
 }
 
 @tailwind base;

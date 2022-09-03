@@ -1,16 +1,14 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import SphereWidget from '../components/Sphere/SphereWidget';
+import Hero from '../components/Hero/Hero';
 const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
 				<title>rez | Frontend Developer</title>
 			</Head>
-			<main className='bg-black w-screen h-screen'>
-				<a href='https://github.com/rezonmain' className='cursor-pointer'>
-					<SphereWidget />
-				</a>
+			<main className='bg-neutral-900 font-serif'>
+				<Hero />
 			</main>
 		</>
 	);
