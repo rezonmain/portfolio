@@ -38,3 +38,9 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.text-glitched {
+		@apply glitched;
+	}
+}
