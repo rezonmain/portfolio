@@ -1,34 +1,28 @@
 import * as THREE from 'three';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useFrame, useLoader, Vector3 } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { SphereGeometry } from 'three';
 import { mergeVertices } from 'three/examples/jsm/utils/BufferGeometryUtils';
-import { useSpring, animated } from '@react-spring/three';
+import { animated, useSpring } from '@react-spring/three';
 
 const Sphere = ({ position }: { position: Vector3 }) => {
-	const [active, setActive] = useState(false);
 	const ref = useRef<THREE.Points>(null!);
 	const pointTexture = useLoader(TextureLoader, '/img/disc.png');
-	const colorTexture = useLoader(TextureLoader, '/img/map.jpg');
-	const material = new THREE.MeshBasicMaterial();
-	material.map = colorTexture;
 
-	useFrame((state, delta) => {
+	useFrame(() => {
 		// Rotation is in radians
 		ref.current.rotation.y -= 0.001;
 		// Rotate 20 degrees cw
 		ref.current.rotation.x = (20 * Math.PI) / 180;
-		ref.current.rotation.z = (-10 * Math.PI) / 180;
+		ref.current.rotation.z = (-8 * Math.PI) / 180;
 	});
-
-	const { scale } = useSpring({ scale: active ? 0.05 : 1 });
 
 	let sphere = new SphereGeometry(45);
 	sphere.deleteAttribute('normal');
 	sphere.deleteAttribute('uv');
 	sphere = mergeVertices(sphere) as SphereGeometry;
-	const pSize = 5;
+	const pSize = 3;
 
 	const spherePosition = sphere.getAttribute('position');
 	let sizes: number[] | THREE.Float32BufferAttribute = [];
@@ -36,20 +30,24 @@ const Sphere = ({ position }: { position: Vector3 }) => {
 
 	for (let i = 0, l = spherePosition.count; i < l; i++) {
 		const color = new THREE.Color();
-		color.setHSL(0.01 + 0.1 * (i / l), 1.0, 1);
 		color.toArray(colors, i * 3);
 		sizes[i] = pSize * 0.5;
 	}
 	colors = new THREE.Float32BufferAttribute(colors, 3);
 	sizes = new THREE.Float32BufferAttribute(sizes, 1);
 
+	const { scale } = useSpring({
+		to: { scale: 0.95 },
+		from: { scale: 0 },
+		delay: 700,
+		config: {
+			tension: 175,
+			mass: 2,
+		},
+	});
+
 	return (
-		<animated.points
-			scale={scale}
-			position={position}
-			ref={ref}
-			onClick={() => setActive((prev) => !prev)}
-		>
+		<animated.points position={position} ref={ref} scale={scale}>
 			<bufferGeometry>
 				<bufferAttribute
 					attach='attributes-position'

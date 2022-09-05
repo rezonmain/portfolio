@@ -1,39 +1,69 @@
+import { motion } from 'framer-motion';
 import SphereWidget from '../Sphere/SphereWidget';
-import { BsArrowDown } from 'react-icons/bs';
 
 const Hero = () => {
-	const handleScroll = () => {
-		globalThis.scrollTo({
-			top: globalThis.innerHeight,
-			behavior: 'smooth',
-		});
+	const container = {
+		show: {
+			transition: {
+				delayChildren: 1,
+				staggerChildren: 0.13,
+			},
+		},
 	};
+
+	const item = {
+		hidden: { opacity: 0, y: -90 },
+		show: { opacity: 1, y: 0 },
+	};
+
 	return (
-		<section
+		<motion.section
 			id='hero-container'
-			className='h-screen w-screen flex flex-col items-center p-4 justify-around'
+			className='h-screen flex flex-col items-center p-4 justify-around'
 		>
-			<div className='w-full max-w-[500px]'>
+			<motion.div
+				className='w-full max-w-[500px] cursor-grab active:cursor-grabbing'
+				whileHover={{ scale: 1.02 }}
+			>
 				<SphereWidget />
-			</div>
-			<h1 className='text-4xl text-center font-light'>
-				hi, i'm <span className='glitched'>rezonmain</span>
-			</h1>
-			<nav className='flex flex-col gap-6 text-center'>
+			</motion.div>
+			<motion.h1
+				className='text-4xl text-center font-light'
+				variants={item}
+				initial='hidden'
+				animate='show'
+				transition={{
+					delay: 1,
+					type: 'spring',
+					stiffness: 300,
+					damping: 40,
+				}}
+			>
+				{"hi, i'm "}
+				<span className='glitched'>rezonmain</span>
+			</motion.h1>
+			<motion.nav
+				className='flex flex-col gap-6 text-center'
+				variants={container}
+				initial='hidden'
+				animate='show'
+			>
 				{[
 					['[ about me ]', '/about'],
 					['[ my work ]', '/work'],
 					['[ contact ]', '/contact'],
 				].map(([title, url], i) => (
-					<a
+					<motion.a
 						key={i}
-						className='cursor-pointer select-none text-xl hover:text-glitched active:text-glitched transition-all'
+						variants={item}
+						transition={{ type: 'spring', stiffness: 300, damping: 40 }}
+						className='cursor-pointer select-none text-xl hover:text-glitched active:text-glitched transition-[text-shadow]'
 					>
 						{title}
-					</a>
+					</motion.a>
 				))}
-			</nav>
-		</section>
+			</motion.nav>
+		</motion.section>
 	);
 };
 

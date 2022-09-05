@@ -22,14 +22,12 @@ const ProjectCard = ({
 					style={{ borderTop: `8px solid ${accentColor}` }}
 					className={`absolute scale-0 border-r-8 border-r-transparent bottom-0 right-0 origin-[center_bottom_0] group-hover:translate-x-2 group-hover:scale-100 transition-transform`}
 				></div>
-				<div id='card-content-container'>
-					<div
-						id='card-content'
-						// style={{ border: `4px outset ${accentColor}` }}
-						className='bg-neutral-800 w-full group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform p-4'
-					>
-						{children}
-					</div>
+				<div
+					id='card-content'
+					// style={{ border: `4px outset ${accentColor}` }}
+					className='bg-neutral-800 w-full group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform p-4'
+				>
+					{children}
 				</div>
 			</div>
 		</div>
