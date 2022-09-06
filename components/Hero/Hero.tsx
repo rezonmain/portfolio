@@ -38,8 +38,8 @@ const Hero = () => {
 			>
 				<SphereWidget />
 			</motion.div>
-			<motion.h1
-				className='text-4xl text-center font-light'
+			<motion.div
+				className=' text-center'
 				variants={item}
 				initial='hidden'
 				animate='show'
@@ -50,9 +50,15 @@ const Hero = () => {
 					damping: 22,
 				}}
 			>
-				{"hi, i'm "}
-				<span className='glitched'>rezonmain</span>
-			</motion.h1>
+				<h1 className='text-5xl font-light'>
+					{"hi, i'm "}
+					<span className='glitched'>rezonmain</span>
+				</h1>
+				<p className='text-lg leading-10 tracking-widest font-light text-neutral-500 '>
+					front-end developer
+				</p>
+			</motion.div>
+
 			<motion.nav
 				className='flex flex-col gap-6 text-center'
 				variants={container}

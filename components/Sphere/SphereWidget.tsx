@@ -43,6 +43,7 @@ const Sphere = ({ position }: { position: Vector3 }) => {
 
 	for (let i = 0, l = spherePosition.count; i < l; i++) {
 		const color = new THREE.Color();
+		color.setHex(0xffffff);
 		color.toArray(colors, i * 3);
 		sizes[i] = pSize * 0.5;
 	}
