@@ -21,10 +21,7 @@ const Hero = () => {
 			id='hero-container'
 			className='h-screen flex flex-col items-center p-4 justify-around'
 		>
-			<motion.div
-				className='w-full max-w-[500px] cursor-grab active:cursor-grabbing'
-				whileHover={{ scale: 1.02 }}
-			>
+			<motion.div className='w-full max-w-[500px] cursor-grab active:cursor-grabbing'>
 				<SphereWidget />
 			</motion.div>
 			<motion.h1
