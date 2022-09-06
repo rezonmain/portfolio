@@ -2,7 +2,7 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 
 const ProjectList = () => {
 	return (
-		<section id='project-list' className='p-4 mx-auto max-w-[800px]'>
+		<section id='my-work'>
 			<h1 className='text-2xl glitched'>{'[ my work ]'}</h1>
 			<div className='mt-4 flex flex-col items-center gap-4 lg:grid lg:grid-cols-2'>
 				<ProjectCard accentColor='#F5F5F5'>

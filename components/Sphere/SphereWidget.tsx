@@ -8,35 +8,27 @@ import { mergeVertices } from 'three/examples/jsm/utils/BufferGeometryUtils';
 import { a, useSpring } from '@react-spring/three';
 
 const SphereWidget = () => {
-	const [stop, setStop] = useState(false);
 	return (
-		<div
-			id='canvas-container'
-			className='aspect-square touch-none'
-			onPointerDown={() => setStop(true)}
-			onPointerUp={() => setStop(false)}
-		>
+		<div id='canvas-container' className='aspect-square'>
 			<Canvas camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 0, 122] }}>
 				<ambientLight intensity={100} />
-				<Sphere position={[0, 0, 0]} stop={stop} />
+				<Sphere position={[0, 0, 0]} />
 			</Canvas>
 		</div>
 	);
 };
 
-const Sphere = ({ position, stop }: { position: Vector3; stop: boolean }) => {
+const Sphere = ({ position }: { position: Vector3 }) => {
 	const ref = useRef<THREE.Points>(null!);
 	const time = useRef(0);
 	const pointTexture = useLoader(TextureLoader, '/img/disc.png');
 
 	useFrame((state, delta) => {
 		// Rotation is in radians
-		if (!stop) {
-			time.current += delta;
-			let rotVel = 0.03 - 0.005 * time.current;
-			rotVel = rotVel <= 0.002 ? 0.002 : rotVel;
-			ref.current.rotation.y -= rotVel;
-		}
+		time.current += delta;
+		let rotVel = 0.03 - 0.005 * time.current;
+		rotVel = rotVel <= 0.002 ? 0.002 : rotVel;
+		ref.current.rotation.y -= rotVel;
 	});
 
 	let sphere = new SphereGeometry(45);
