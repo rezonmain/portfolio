@@ -6,7 +6,7 @@ const ProjectCard = ({
 	accentColor: string;
 }) => {
 	return (
-		<div id='card-container' className='w-full'>
+		<div id='card-container' className='w-full cursor-pointer'>
 			<div
 				id='card-background'
 				style={{ backgroundColor: accentColor }}
