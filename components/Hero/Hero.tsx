@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Navigation from '../Navigation/Navigation';
 import SphereWidget from '../Sphere/SphereWidget';
 

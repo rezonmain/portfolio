@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import Footer from '../Footer/Footer';
 import GoBack from '../GoBack/GoBack';
 import Navigation from '../Navigation/Navigation';
@@ -5,9 +6,15 @@ import Navigation from '../Navigation/Navigation';
 const ContentLayout = ({ children }: { children: JSX.Element }) => {
 	return (
 		<>
-			{/* <Navigation /> */}
-			<GoBack />
-			<main>{children}</main>
+			<Navigation as='content' />
+			<main>
+				<AnimatePresence
+					mode='wait'
+					onExitComplete={() => window.scrollTo(0, 0)}
+				>
+					{children}
+				</AnimatePresence>
+			</main>
 			<Footer />
 		</>
 	);

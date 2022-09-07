@@ -6,6 +6,7 @@ const GoBack = () => {
 	const router = useRouter();
 	return (
 		<motion.div
+			id='go-back'
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}

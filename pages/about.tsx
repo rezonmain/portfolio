@@ -11,15 +11,13 @@ const About: NextPageWithLayout = () => {
 				<title>rezonmain | about</title>
 			</Head>
 			<Transition>
-				<>
-					<h1>about</h1>
-				</>
+				<h1>about</h1>
 			</Transition>
 		</>
 	);
 };
 
-//Opt-in for the consistent layouy
+// Opt-in for the consistent layouy
 About.getLayout = function getLayout(page: ReactElement) {
 	return <ContentLayout>{page}</ContentLayout>;
 };
