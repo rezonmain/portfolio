@@ -75,7 +75,7 @@ const Hero = () => {
 						key={i}
 						variants={item}
 						transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-						className='cursor-pointer font-extralight select-none text-2xl hover:text-glitched active:text-glitched transition-[text-shadow]'
+						className='cursor-pointer font-extralight select-none text-2xl hover:text-glitched active:text-glitched hover:italic transition-[text-shadow]'
 					>
 						{title}
 					</motion.a>
