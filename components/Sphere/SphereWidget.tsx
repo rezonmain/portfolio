@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useFrame, useLoader, Vector3 } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { SphereGeometry } from 'three';
