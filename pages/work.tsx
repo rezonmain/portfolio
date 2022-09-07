@@ -1,27 +1,28 @@
 import Head from 'next/head';
 import { ReactElement } from 'react';
 import ContentLayout from '../components/ContentLayout/ContentLayout';
+import Navigation from '../components/Navigation/Navigation';
 import Transition from '../components/Transition/Transition';
 import { NextPageWithLayout } from './_app';
 
-const About: NextPageWithLayout = () => {
+const Work: NextPageWithLayout = () => {
 	return (
 		<>
 			<Head>
-				<title>rezonmain | about</title>
+				<title>rezonmain | work</title>
 			</Head>
 			<Transition>
 				<>
-					<h1>about</h1>
+					<h1>Work</h1>
+					<Navigation />
 				</>
 			</Transition>
 		</>
 	);
 };
 
-//Opt-in for the consistent layouy
-About.getLayout = function getLayout(page: ReactElement) {
+Work.getLayout = function getLayout(page: ReactElement) {
 	return <ContentLayout>{page}</ContentLayout>;
 };
 
-export default About;
+export default Work;

@@ -54,7 +54,7 @@ const Hero = () => {
 					front-end developer
 				</p>
 			</motion.div>
-			<Navigation />
+			<Navigation as='homepage' />
 		</section>
 	);
 };

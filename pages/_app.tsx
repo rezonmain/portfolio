@@ -4,6 +4,9 @@ import { AnimatePresence } from 'framer-motion';
 import { NextPage } from 'next';
 import { ReactElement, ReactNode } from 'react';
 
+/* Allows defining consistent layout on a per page basis
+ see https://nextjs.org/docs/basic-features/layouts */
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 	getLayout?: (page: ReactElement) => ReactNode;
 };

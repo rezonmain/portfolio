@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const Navigation = () => {
+const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 	const container = {
 		show: {
 			transition: {
