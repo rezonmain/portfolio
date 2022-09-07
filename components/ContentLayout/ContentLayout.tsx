@@ -7,7 +7,8 @@ const ContentLayout = ({ children }: { children: JSX.Element }) => {
 	return (
 		<>
 			<Navigation as='content' />
-			<main>
+			<main className='p-8'>
+				<GoBack />
 				<AnimatePresence
 					mode='wait'
 					onExitComplete={() => window.scrollTo(0, 0)}

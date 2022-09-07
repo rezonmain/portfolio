@@ -1,7 +1,6 @@
-import { AnimateSharedLayout, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import GoBack from '../GoBack/GoBack';
 
 const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 	const container = {
@@ -22,10 +21,13 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 
 	if (as === 'content') {
 		return (
-			<nav className='p-4 flex flex-col gap-10'>
-				<div id='links' className='flex flex-row justify-between'>
-					<div id='home-link'>
-						<Link href='/'>Home</Link>
+			<motion.nav className='p-4 sticky' exit={{ opacity: 0 }}>
+				<div
+					id='links'
+					className='flex flex-row justify-between items-center text-lg mx-auto sm:px-14 max-w-[750px] '
+				>
+					<div id='home-link' className='font-light'>
+						<Link href='/'>home</Link>
 					</div>
 					<div id='content-links' className='flex flex-row gap-5 text-center'>
 						{[
@@ -52,8 +54,7 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 						))}
 					</div>
 				</div>
-				<GoBack />
-			</nav>
+			</motion.nav>
 		);
 	}
 

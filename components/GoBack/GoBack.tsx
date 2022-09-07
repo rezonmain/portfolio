@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { BiArrowBack } from 'react-icons/bi';
 
@@ -11,9 +11,9 @@ const GoBack = () => {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			onClick={() => router.back()}
-			className='top-[10vw] left-[10vw] cursor-pointer w-fit h-fit p-1 rounded-full hover:bg-neutral-700 transition-colors'
+			className='cursor-pointer w-fit h-fit p-1 rounded-full hover:bg-neutral-700 transition-colors'
 		>
-			<BiArrowBack size={32} />
+			<BiArrowBack size={28} />
 		</motion.div>
 	);
 };
