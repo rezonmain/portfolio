@@ -24,9 +24,9 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 			<motion.nav className='p-4 sticky' exit={{ opacity: 0 }}>
 				<div
 					id='links'
-					className='flex flex-row justify-between items-center text-lg mx-auto sm:px-14 max-w-[750px] '
+					className='flex flex-row justify-between items-center text-lg mx-auto max-w-5xl lg:px-4'
 				>
-					<div id='home-link' className='font-light'>
+					<div id='home-link' className='font-light hover:text-glitched'>
 						<Link href='/'>home</Link>
 					</div>
 					<div id='content-links' className='flex flex-row gap-5 text-center'>
@@ -47,6 +47,11 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 										<motion.div
 											layoutId='nav-selected'
 											className='nav-selected'
+											transition={{
+												type: 'spring',
+												stiffness: 300,
+												damping: 25,
+											}}
 										></motion.div>
 									)}
 								</motion.a>
