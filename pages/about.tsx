@@ -1,20 +1,21 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Hero from '../components/Hero/Hero';
-import React from 'react';
+import GoBack from '../components/GoBack/GoBack';
 import Transition from '../components/Transition/Transition';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>rezonmain | front-end dev</title>
+				<title>rezonmain | about</title>
 			</Head>
 			<Transition>
-				<Hero />
+				<>
+					<GoBack />
+				</>
 			</Transition>
 		</>
 	);
 };
 
-export default Home;
+export default About;

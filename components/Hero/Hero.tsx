@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Parallax from '../Parallax/Parallax';
+import Link from 'next/link';
 import SphereWidget from '../Sphere/SphereWidget';
 
 const Hero = () => {
@@ -17,24 +17,28 @@ const Hero = () => {
 		show: { opacity: 1, y: 0 },
 	};
 
-	const scrollTo = (id: string) => {
-		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+	const sphere = {
+		hidden: { y: 300 },
+		show: {
+			y: 0,
+			transition: {
+				type: 'spring',
+				stiffness: 400,
+				damping: 90,
+			},
+		},
 	};
 
 	return (
-		<motion.section
+		<section
 			id='hero-container'
 			className='h-screen flex flex-col items-center p-4 justify-around'
 		>
 			<motion.div
 				className='w-full max-w-[500px]'
-				initial={{ y: 300 }}
-				animate={{ y: 0 }}
-				transition={{
-					type: 'spring',
-					stiffness: 400,
-					damping: 90,
-				}}
+				variants={sphere}
+				initial='hidden'
+				animate='show'
 			>
 				<SphereWidget />
 			</motion.div>
@@ -66,22 +70,23 @@ const Hero = () => {
 				animate='show'
 			>
 				{[
-					['[ about me ]', 'about-me'],
-					['[ my work ]', 'my-work'],
-					['[ contact ]', 'contact'],
-				].map(([title, element], i) => (
-					<motion.a
-						onClick={() => scrollTo(element)}
-						key={i}
-						variants={item}
-						transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-						className='cursor-pointer font-extralight select-none text-2xl hover:text-glitched active:text-glitched hover:italic transition-[text-shadow]'
-					>
-						{title}
-					</motion.a>
+					['[ about me ]', '/about'],
+					['[ my work ]', '/work'],
+					['[ contact ]', '/contact'],
+				].map(([title, url], i) => (
+					<Link href={url} key={i}>
+						<motion.a
+							key={i}
+							variants={item}
+							transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+							className='cursor-pointer font-extralight select-none text-2xl hover:text-glitched active:text-glitched hover:italic transition-[text-shadow]'
+						>
+							{title}
+						</motion.a>
+					</Link>
 				))}
 			</motion.nav>
-		</motion.section>
+		</section>
 	);
 };
 
