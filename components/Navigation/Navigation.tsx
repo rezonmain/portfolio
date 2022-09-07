@@ -21,10 +21,10 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 
 	if (as === 'content') {
 		return (
-			<motion.nav className='p-4 sticky' exit={{ opacity: 0 }}>
+			<motion.nav className='py-4 sticky' exit={{ opacity: 0 }}>
 				<div
 					id='links'
-					className='flex flex-row justify-between items-center text-lg mx-auto max-w-5xl lg:px-4'
+					className='flex flex-row justify-between items-center text-lg mx-auto px-6 sm:max-w-3xl xl:px-0 xl:max-w-5xl'
 				>
 					<div id='home-link' className='font-light hover:text-glitched'>
 						<Link href='/'>home</Link>
@@ -39,7 +39,7 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 								<motion.a
 									key={i}
 									transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-									className={`cursor-pointer font-extralight select-none hover:text-glitched transition-[text-shadow] text-lg 
+									className={`cursor-pointer font-extralight select-none hover:text-glitched transition-[text-shadow]
 										${router.route === url ? 'text-glitched' : ''}`}
 								>
 									{title}

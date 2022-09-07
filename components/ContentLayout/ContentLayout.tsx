@@ -7,7 +7,7 @@ const ContentLayout = ({ children }: { children: JSX.Element }) => {
 	return (
 		<>
 			<Navigation as='content' />
-			<main className='py-8 px-4 mx-auto max-w-5xl'>
+			<main className='py-8 mx-auto px-6 sm:max-w-3xl xl:px-0 xl:max-w-5xl'>
 				<GoBack />
 				<AnimatePresence
 					mode='wait'
