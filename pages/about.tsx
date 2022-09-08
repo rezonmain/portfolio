@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import ContentLayout from '../components/ContentLayout/ContentLayout';
 import TechIcons from '../components/TechIcons/TechIcons';
 import Transition from '../components/Transition/Transition';
-import tech, { Tech } from '../lib/tech';
+import { Tech } from '../lib/tech';
 import { NextPageWithLayout } from './_app';
 
 const About: NextPageWithLayout = () => {
@@ -14,7 +14,7 @@ const About: NextPageWithLayout = () => {
 			</Head>
 			<Transition>
 				<section id='text-container' className='max-w-2xl flex flex-col gap-10'>
-					<div>
+					<article>
 						<Sub>about me</Sub>
 						<Text>
 							<>
@@ -23,9 +23,9 @@ const About: NextPageWithLayout = () => {
 								<b>front-end developer</b> located in tijuana 🇲🇽, I focus on
 								responsive and mobile friendly UX, with the goal to make every
 								website accessible to everyone.
-								<Pbr />I have a technical degree in electronics and a bachelor
-								degree in bioengineering, but have dedicated the last 2.5 years
-								learning web development.
+								<Pbr />I have a technical degree in <b>electronics</b> and a
+								bachelor degree in <b>bioengineering</b>, but have dedicated the
+								last 2.5 years learning web development.
 								<Pbr />
 								I've been programming since my early teens, started with{' '}
 								<b>C</b>, writing firmware for{' '}
@@ -38,8 +38,8 @@ const About: NextPageWithLayout = () => {
 								documents.
 							</>
 						</Text>
-					</div>
-					<div>
+					</article>
+					<article>
 						<Sub>tech stack</Sub>
 						<Text>
 							<>
@@ -62,14 +62,14 @@ const About: NextPageWithLayout = () => {
 						{/* All icons */}
 						<br />
 						<TechIcons techs={Object.values(Tech)} />
-					</div>
+					</article>
 				</section>
 			</Transition>
 		</>
 	);
 };
 
-const Sub = ({
+export const Sub = ({
 	children,
 	id,
 }: {
@@ -83,11 +83,17 @@ const Sub = ({
 	);
 };
 
-const Text = ({ children }: { children: string | JSX.Element }) => {
+export const Text = ({ children }: { children: string | JSX.Element }) => {
 	return <p className='text-xl font-extralight'>{children}</p>;
 };
 
-const TextLink = ({ children, href }: { children: string; href: string }) => {
+export const TextLink = ({
+	children,
+	href,
+}: {
+	children: string;
+	href: string;
+}) => {
 	return (
 		<a
 			target='_blank'

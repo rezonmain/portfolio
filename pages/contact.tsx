@@ -2,7 +2,9 @@ import Head from 'next/head';
 import { ReactElement } from 'react';
 import ContentLayout from '../components/ContentLayout/ContentLayout';
 import Transition from '../components/Transition/Transition';
+import { Sub, TextLink } from './about';
 import { NextPageWithLayout } from './_app';
+import { BsEnvelope } from 'react-icons/bs';
 
 const Contact: NextPageWithLayout = () => {
 	return (
@@ -11,7 +13,11 @@ const Contact: NextPageWithLayout = () => {
 				<title>rezonmain | contact</title>
 			</Head>
 			<Transition>
-				<h1>contact</h1>
+				<article>
+					<Sub>Drop me an email</Sub>
+					<BsEnvelope />
+					<TextLink href='mailto:rez@rezonmain.dev'>rez@rezonmain.dev</TextLink>
+				</article>
 			</Transition>
 		</>
 	);

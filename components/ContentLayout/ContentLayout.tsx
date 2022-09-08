@@ -1,12 +1,12 @@
 import { AnimatePresence } from 'framer-motion';
 import Footer from '../Footer/Footer';
 import GoBack from '../GoBack/GoBack';
-import Navigation from '../Navigation/Navigation';
+import Header from '../Header/Header';
 
 const ContentLayout = ({ children }: { children: JSX.Element }) => {
 	return (
 		<>
-			<Navigation as='content' />
+			<Header />
 			<main className='py-8 mx-auto px-6 sm:max-w-3xl xl:px-0 xl:max-w-5xl'>
 				<GoBack />
 				<AnimatePresence

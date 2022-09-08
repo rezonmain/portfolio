@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
-import { useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import { useFrame, useLoader, Vector3 } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { SphereGeometry } from 'three';
@@ -12,7 +12,9 @@ const SphereWidget = () => {
 		<div id='canvas-container' className='aspect-square'>
 			<Canvas camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 0, 122] }}>
 				<ambientLight intensity={100} />
-				<Sphere position={[0, 0, 0]} />
+				<Suspense fallback={null}>
+					<Sphere position={[0, 0, 0]} />
+				</Suspense>
 			</Canvas>
 		</div>
 	);

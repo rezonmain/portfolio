@@ -17,52 +17,40 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 		show: { opacity: 1, y: 0 },
 	};
 
+	const links = [
+		['about', '/about'],
+		['my work', '/work'],
+		['contact', '/contact'],
+	];
+
 	const router = useRouter();
 
 	if (as === 'content') {
 		return (
-			<motion.nav
-				className='py-4 bg-neutral-900 top-0 sticky z-10 border-b-[0.5px] border-neutral-600'
-				exit={{ opacity: 0 }}
-			>
-				<div
-					id='links'
-					className='flex flex-row justify-between items-center text-lg mx-auto px-6 sm:max-w-3xl xl:px-0 xl:max-w-5xl'
-				>
-					<div id='home-link' className='font-light hover:text-glitched'>
-						<Link href='/'>home</Link>
-					</div>
-					<div id='content-links' className='flex flex-row gap-5 text-center'>
-						{[
-							['about', '/about'],
-							['my work', '/work'],
-							['contact', '/contact'],
-						].map(([title, url], i) => (
-							<Link href={url} key={i}>
-								<motion.a
-									key={i}
-									transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-									className={`cursor-pointer font-extralight select-none hover:text-glitched transition-[text-shadow]
-										${router.route === url ? 'text-glitched' : ''}`}
-								>
-									{title}
-									{router.route === url && (
-										<motion.div
-											layoutId='nav-selected'
-											className='nav-selected'
-											transition={{
-												type: 'spring',
-												stiffness: 300,
-												damping: 25,
-											}}
-										></motion.div>
-									)}
-								</motion.a>
-							</Link>
-						))}
-					</div>
-				</div>
-			</motion.nav>
+			<nav id='content-links' className='flex flex-row gap-5 text-center'>
+				{links.map(([title, url], i) => (
+					<Link href={url} key={i}>
+						<a
+							className={`cursor-pointer font-extralight hover:text-glitched transition-[text-shadow] ${
+								router.route === url ? 'text-glitched' : ''
+							}`}
+						>
+							{title}
+							{router.route === url && (
+								<motion.div
+									layoutId='nav-selected'
+									className='nav-selected'
+									transition={{
+										type: 'spring',
+										stiffness: 300,
+										damping: 25,
+									}}
+								></motion.div>
+							)}
+						</a>
+					</Link>
+				))}
+			</nav>
 		);
 	}
 
