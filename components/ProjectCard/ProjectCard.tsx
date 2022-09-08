@@ -1,6 +1,6 @@
-import { Tech } from '../ProjectList/ProjectList';
 import { BsGithub, BsGlobe } from 'react-icons/bs';
 import Image from 'next/image';
+import tech, { Tech } from '../../lib/tech';
 
 const ProjectCard = ({
 	title,
@@ -13,7 +13,7 @@ const ProjectCard = ({
 }: {
 	title: string;
 	description: string;
-	imgSrc: string;
+	imgSrc?: string;
 	techs: Tech[];
 	webURL?: string;
 	codeURL: string;
@@ -47,7 +47,7 @@ const ProjectCard = ({
 					</p>
 					<div
 						id='tech-icons'
-						className='flex flex-row gap-2 bg-neutral-900 w-fit p-1.5 rounded-xl'
+						className='flex flex-row flex-wrap gap-2 bg-neutral-900 w-fit p-1.5 rounded-xl'
 					>
 						{techs.map((t, i) => (
 							<div key={i} className='w-[30px] h-[30px]'>
@@ -81,81 +81,6 @@ const ProjectCard = ({
 			</div>
 		</div>
 	);
-};
-
-export const tech = {
-	react: {
-		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/main/.github/react-icon.svg',
-		alt: 'reactjs icon',
-		url: 'https://reactjs.org/',
-		title: 'React.js',
-	},
-	ts: {
-		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/main/.github/typescript-icon.svg',
-		alt: 'typescript icon',
-		url: 'https://www.typescriptlang.org',
-		title: 'Typescript',
-	},
-	next: {
-		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/main/.github/nextjs-icon.svg',
-		alt: 'nextjs icon',
-		url: 'https://nextjs.org',
-		title: 'Next.js',
-	},
-	d3: {
-		src: 'https://raw.githubusercontent.com/d3/d3-logo/master/d3.png',
-		alt: 'd3js icon',
-		url: 'https://d3js.org/',
-		title: 'D3.js',
-	},
-	tailwind: {
-		src: 'https://www.nstinfotech.com/wp-content/uploads/2020/10/tailwind-logo.png',
-		alt: 'tailwind css icon',
-		url: 'https://tailwindcss.com/',
-		title: 'Tailwind CSS',
-	},
-	three: {
-		src: 'https://raw.githubusercontent.com/rezonmain/portfolio/dev/public/img/three.png',
-		alt: 'threejs icon',
-		url: 'https://threejs.org/',
-		title: 'Three.js',
-	},
-	js: {
-		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/main/.github/js-icon.svg',
-		alt: 'javascript icon',
-		url: 'https://developer.mozilla.org/en-US/docs/Web/javascript',
-		title: 'Javascript',
-	},
-	html: {
-		src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
-		alt: 'html icon',
-		url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-		title: 'Html 5',
-	},
-	css: {
-		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/main/.github/css-icon.svg',
-		alt: 'css icon',
-		url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-		title: 'CSS 3',
-	},
-	vba: {
-		src: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-k8cyYC06VjI%2FXm9Uaj76SZI%2FAAAAAAAALkc%2FMqiKk07ZN2cJ9z1rlIxgI0WgAI3FWE7wACLcBGAsYHQ%2Fs1600%2F1920px-VB.NET_Logo.svg.png&f=1&nofb=1',
-		alt: 'vba icon',
-		url: 'https://docs.microsoft.com/en-us/office/vba/api/overview/',
-		title: 'Visual Basic',
-	},
-	mongo: {
-		src: 'https://avatars.githubusercontent.com/u/45120?s=200&v=4',
-		alt: 'mongodb icon',
-		url: 'https://www.mongodb.com/',
-		title: 'MongoDB',
-	},
-	docker: {
-		src: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png',
-		alt: 'docker icon',
-		url: 'https://www.docker.com/',
-		title: 'Docker',
-	},
 };
 
 export default ProjectCard;

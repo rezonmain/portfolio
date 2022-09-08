@@ -10,6 +10,7 @@ const nextConfig = {
 			'external-content.duckduckgo.com',
 			'avatars.githubusercontent.com',
 			'cdn4.iconfinder.com',
+			'trpc.io',
 		],
 	},
 };
