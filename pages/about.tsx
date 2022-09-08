@@ -91,14 +91,14 @@ export const TextLink = ({
 	children,
 	href,
 }: {
-	children: string;
+	children: string | JSX.Element;
 	href: string;
 }) => {
 	return (
 		<a
 			target='_blank'
 			rel='noreferrer'
-			className='text-blue-500 visited:text-purple-500 hover:underline'
+			className='text-blue-500 hover:underline'
 			href={href}
 		>
 			{children}
