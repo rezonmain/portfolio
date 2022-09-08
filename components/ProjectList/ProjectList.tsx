@@ -31,7 +31,7 @@ const projects: Project[] = [
 		description:
 			'Front end for my minecraft server scanner, Browse scanned entries, look for particular servers or players, see players skins with the built-in 3D skin viewer',
 		imgSrc: '/img/swc.png',
-		techs: ['react', 'ts', 'next', 'tailwind', 'mongo', 'docker', 'three'],
+		techs: ['react', 'ts', 'next', 'tailwind', 'three', 'mongo', 'docker'],
 		webURL: 'https://mc-server-scanner.vercel.app/',
 		codeURL: 'https://github.com/rezonmain/mc-server-scanner',
 		accentColor: '#17A34A',

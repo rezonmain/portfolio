@@ -1,5 +1,6 @@
 import { Tech } from '../ProjectList/ProjectList';
 import { BsGithub, BsGlobe } from 'react-icons/bs';
+import Image from 'next/image';
 
 const ProjectCard = ({
 	title,
@@ -46,33 +47,31 @@ const ProjectCard = ({
 					</p>
 					<div
 						id='tech-icons'
-						className='flex flex-row gap-2 bg-neutral-900 w-fit p-1 rounded-xl'
+						className='flex flex-row gap-2 bg-neutral-900 w-fit p-1.5 rounded-xl'
 					>
 						{techs.map((t, i) => (
-							<a
-								target='_blank'
-								key={i}
-								href={tech[t].url}
-								className='p-0.5 rounded-full'
-							>
-								<img
-									title={tech[t].title}
-									src={tech[t].src}
-									alt={tech[t].alt}
-									width='30px'
-								></img>
-							</a>
+							<div key={i} className='w-[30px] h-[30px]'>
+								<a target='_blank' rel='noreferrer' href={tech[t].url}>
+									<Image
+										title={tech[t].title}
+										src={tech[t].src}
+										alt={tech[t].alt}
+										width='30px'
+										height='30px'
+									></Image>
+								</a>
+							</div>
 						))}
 					</div>
 					<div id='links' className='flex flex-row gap-3 justify-end'>
-						<a target='_blank' href={codeURL}>
-							<div className='p-1 rounded-full hover:bg-neutral-700'>
+						<a target='_blank' rel='noreferrer' href={codeURL}>
+							<div className='p-1 rounded-full hover:scale-[1.1] transition-transform'>
 								<BsGithub size={30} title='Source code' />
 							</div>
 						</a>
 						{webURL && (
-							<a target='_blank' href={webURL}>
-								<div className='p-1 rounded-full hover:bg-neutral-700 transition-colors'>
+							<a target='_blank' rel='noreferrer' href={webURL}>
+								<div className='p-1 rounded-full hover:scale-[1.1] transition-transform'>
 									<BsGlobe size={30} title='Website' />
 								</div>
 							</a>
@@ -116,8 +115,7 @@ export const tech = {
 		title: 'Tailwind CSS',
 	},
 	three: {
-		// src: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg',
-		src: '/img/three.png',
+		src: 'https://raw.githubusercontent.com/rezonmain/portfolio/dev/public/img/three.png',
 		alt: 'threejs icon',
 		url: 'https://threejs.org/',
 		title: 'Three.js',
