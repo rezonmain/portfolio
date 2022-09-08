@@ -1,17 +1,19 @@
-export type Tech =
-	| 'js'
-	| 'css'
-	| 'html'
-	| 'react'
-	| 'ts'
-	| 'next'
-	| 'd3'
-	| 'tailwind'
-	| 'vba'
-	| 'mongo'
-	| 'docker'
-	| 'trpc'
-	| 'three';
+export enum Tech {
+	js = 'js',
+	css = 'css',
+	html = 'html',
+	react = 'react',
+	ts = 'ts',
+	next = 'next',
+	d3 = 'd3',
+	tailwind = 'tailwind',
+	vba = 'vba',
+	mongo = 'mongo',
+	docker = 'docker',
+	trpc = 'trpc',
+	vscode = 'vscode',
+	three = 'three',
+}
 
 const tech = {
 	react: {
@@ -91,6 +93,12 @@ const tech = {
 		alt: 'trpc icon',
 		url: 'https://trpc.io/',
 		title: 'tRPC',
+	},
+	vscode: {
+		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/5bbe933ecb81a1650e0041ec6e47ebde0dd4ffb1/.github/vscode-icon.svg',
+		alt: 'vscode',
+		url: 'https://code.visualstudio.com/',
+		title: 'Visual studio code',
 	},
 };
 

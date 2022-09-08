@@ -21,7 +21,10 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 
 	if (as === 'content') {
 		return (
-			<motion.nav className='py-4 sticky' exit={{ opacity: 0 }}>
+			<motion.nav
+				className='py-4 bg-neutral-900 top-0 sticky z-10 border-b-[0.5px] border-neutral-600'
+				exit={{ opacity: 0 }}
+			>
 				<div
 					id='links'
 					className='flex flex-row justify-between items-center text-lg mx-auto px-6 sm:max-w-3xl xl:px-0 xl:max-w-5xl'

@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { ReactElement } from 'react';
 import ContentLayout from '../components/ContentLayout/ContentLayout';
+import TechIcons from '../components/TechIcons/TechIcons';
 import Transition from '../components/Transition/Transition';
+import tech, { Tech } from '../lib/tech';
 import { NextPageWithLayout } from './_app';
 
 const About: NextPageWithLayout = () => {
@@ -19,11 +21,11 @@ const About: NextPageWithLayout = () => {
 								Hello, my name is alejandro díaz (aka{' '}
 								<span className='glitched'>rezonmain</span>) I'm a{' '}
 								<b>front-end developer</b> located in tijuana 🇲🇽, I focus on
-								mobile friendly UX, with the goal to make every website
-								accesable to everyone.
+								responsive and mobile friendly UX, with the goal to make every
+								website accessible to everyone.
 								<Pbr />I have a technical degree in electronics and a bachelor
-								degree in bioingeneering, but have dedicated the last 2.5 years
-								learning web development
+								degree in bioengineering, but have dedicated the last 2.5 years
+								learning web development.
 								<Pbr />
 								I've been programming since my early teens, started with{' '}
 								<b>C</b>, writing firmware for{' '}
@@ -32,7 +34,7 @@ const About: NextPageWithLayout = () => {
 								<b>python</b> in college, in the last year of it I learned{' '}
 								<b>javascript</b> to write websites and back-end services for my
 								school IoT and research projects. I also have a bit of
-								experience writing <b>VBA</b> for automating microsoft office
+								experience writing <b>VBA</b> for automating Microsoft office
 								documents.
 							</>
 						</Text>
@@ -47,15 +49,19 @@ const About: NextPageWithLayout = () => {
 								<TextLink href='https://nextjs.org/learn/foundations/how-nextjs-works/rendering'>
 									SSR
 								</TextLink>
-								.
+								. Though I'm not afraid of writing simple websites with vanilla
+								JS
 								<Pbr />
 								<b>Typescript</b> is my language of choice for both front-end
 								and when I need to write a little bit of back-end code, which is
-								usally in the form of a{' '}
+								usually in the form of a{' '}
 								<TextLink href='https://trpc.io/'>tRPC</TextLink> api, and
 								involves a <b>mongoDB</b> database.
 							</>
 						</Text>
+						{/* All icons */}
+						<br />
+						<TechIcons techs={Object.values(Tech)} />
 					</div>
 				</section>
 			</Transition>
@@ -63,8 +69,18 @@ const About: NextPageWithLayout = () => {
 	);
 };
 
-const Sub = ({ children }: { children: string | JSX.Element }) => {
-	return <h2 className='text-3xl mb-5'>{children}</h2>;
+const Sub = ({
+	children,
+	id,
+}: {
+	children: string | JSX.Element;
+	id?: string;
+}) => {
+	return (
+		<h2 id={id ? id : 'sub-title'} className='text-3xl mb-5'>
+			{children}
+		</h2>
+	);
 };
 
 const Text = ({ children }: { children: string | JSX.Element }) => {
