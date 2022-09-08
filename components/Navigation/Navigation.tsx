@@ -38,7 +38,6 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 							{title}
 							{router.route === url && (
 								<motion.div
-									layoutId='nav-selected'
 									className='nav-selected'
 									transition={{
 										type: 'spring',
