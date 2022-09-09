@@ -2,7 +2,7 @@ export enum Tech {
 	js = 'js',
 	css = 'css',
 	html = 'html',
-	react = 'react',
+	reactjs = 'reactjs',
 	ts = 'ts',
 	next = 'next',
 	d3 = 'd3',
@@ -16,7 +16,7 @@ export enum Tech {
 }
 
 const tech = {
-	react: {
+	reactjs: {
 		src: 'https://raw.githubusercontent.com/Pedro-Murilo/icons-for-readme/main/.github/react-icon.svg',
 		alt: 'reactjs icon',
 		url: 'https://reactjs.org/',

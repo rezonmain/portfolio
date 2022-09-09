@@ -19,7 +19,7 @@ const About: NextPageWithLayout = () => {
 						<Text>
 							<>
 								Hello, my name is alejandro díaz (aka{' '}
-								<span className='glitched'>rezonmain</span>) I'm a{' '}
+								<span className='glitched'>rezonmain</span>) I&apos;m a{' '}
 								<b>front-end developer</b> located in tijuana 🇲🇽, I focus on
 								responsive and mobile friendly UX, with the goal to make every
 								website accessible to everyone.
@@ -27,7 +27,7 @@ const About: NextPageWithLayout = () => {
 								bachelor degree in <b>bioengineering</b>, but have dedicated the
 								last 2.5 years learning web development.
 								<Pbr />
-								I've been programming since my early teens, started with{' '}
+								I&apos;ve been programming since my early teens, started with{' '}
 								<b>C</b>, writing firmware for{' '}
 								<TextLink href='https://www.arduino.cc/'>arduino</TextLink>, PIC
 								and ATMEL based microcontrollers, then learned <b>matlab</b> and{' '}
@@ -49,8 +49,8 @@ const About: NextPageWithLayout = () => {
 								<TextLink href='https://nextjs.org/learn/foundations/how-nextjs-works/rendering'>
 									SSR
 								</TextLink>
-								. Though I'm not afraid of writing simple websites with vanilla
-								JS
+								. Though I&apos;m not afraid of writing simple websites with
+								vanilla JS
 								<Pbr />
 								<b>Typescript</b> is my language of choice for both front-end
 								and when I need to write a little bit of back-end code, which is
