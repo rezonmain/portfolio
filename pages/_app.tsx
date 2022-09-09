@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { AnimatePresence } from 'framer-motion';
 import { NextPage } from 'next';
 import { ReactElement, ReactNode } from 'react';
+import { ThemeProvider } from 'next-themes';
 
 /* Allows defining consistent layout on a per page basis
  see https://nextjs.org/docs/basic-features/layouts */
@@ -20,7 +21,9 @@ function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
 
 	return (
 		<AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
-			{getLayout(<Component {...pageProps} key={router.route} />)}
+			<ThemeProvider attribute='class'>
+				{getLayout(<Component {...pageProps} key={router.route} />)}
+			</ThemeProvider>
 		</AnimatePresence>
 	);
 }

@@ -1,26 +1,41 @@
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
-import { Suspense, useRef } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useFrame, useLoader, Vector3 } from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { SphereGeometry } from 'three';
 import { mergeVertices } from 'three/examples/jsm/utils/BufferGeometryUtils';
 import { a, useSpring } from '@react-spring/three';
+import { useTheme } from 'next-themes';
 
 const SphereWidget = () => {
+	const [mounted, setMounted] = useState(false);
+	const { resolvedTheme } = useTheme();
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
 	return (
 		<div id='canvas-container' className='aspect-square'>
 			<Canvas camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 0, 122] }}>
 				<ambientLight intensity={100} />
-				<Suspense fallback={null}>
-					<Sphere position={[0, 0, 0]} />
-				</Suspense>
+				{mounted && (
+					<Suspense fallback={null}>
+						<Sphere position={[0, 0, 0]} theme={resolvedTheme} />
+					</Suspense>
+				)}
 			</Canvas>
 		</div>
 	);
 };
 
-const Sphere = ({ position }: { position: Vector3 }) => {
+const Sphere = ({
+	position,
+	theme,
+}: {
+	position: Vector3;
+	theme: string | undefined;
+}) => {
 	const ref = useRef<THREE.Points>(null!);
 	const time = useRef(0);
 	const pointTexture = useLoader(TextureLoader, '/img/disc.png');
@@ -37,7 +52,7 @@ const Sphere = ({ position }: { position: Vector3 }) => {
 	sphere.deleteAttribute('normal');
 	sphere.deleteAttribute('uv');
 	sphere = mergeVertices(sphere) as SphereGeometry;
-	const pSize = 4;
+	const pSize = theme === 'dark' ? 4 : 5;
 
 	const spherePosition = sphere.getAttribute('position');
 	let sizes: number[] | THREE.Float32BufferAttribute = [];
@@ -45,7 +60,7 @@ const Sphere = ({ position }: { position: Vector3 }) => {
 
 	for (let i = 0, l = spherePosition.count; i < l; i++) {
 		const color = new THREE.Color();
-		color.setHex(0xffffff);
+		color.setHex(theme === 'dark' ? 0xffffff : 0x000000);
 		color.toArray(colors, i * 3);
 		sizes[i] = pSize * 0.5;
 	}

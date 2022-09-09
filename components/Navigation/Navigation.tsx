@@ -31,8 +31,10 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 				{links.map(([title, url], i) => (
 					<Link scroll={false} href={url} key={i}>
 						<a
-							className={`cursor-pointer font-extralight hover:text-glitched transition-[text-shadow] ${
-								router.route === url ? 'text-glitched' : ''
+							className={`cursor-pointer font-extralight hover:text-glitched hover:dark:text-glitched-dark transition-[text-shadow] ${
+								router.route === url
+									? 'text-glitched dark:text-glitched-dark'
+									: ''
 							}`}
 						>
 							{title}
@@ -75,7 +77,7 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 						key={i}
 						variants={item}
 						transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-						className='cursor-pointer font-extralight select-none hover:text-glitched active:text-glitched hover:italic transition-[text-shadow] text-2xl'
+						className='cursor-pointer font-extralight select-none hover:text-glitched hover:dark:text-glitched-dark active:text-glitched hover:italic transition-[text-shadow] text-2xl'
 					>
 						{title}
 					</motion.a>

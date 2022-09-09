@@ -38,7 +38,7 @@ const projects: Project[] = [
 		techs: [Tech.reactjs, Tech.next, Tech.ts, Tech.d3, Tech.tailwind],
 		webURL: 'https://simple-wordcloud.vercel.app/',
 		codeURL: 'https://github.com/rezonmain/simple-wordcloud',
-		accentColor: '#F5F5F5',
+		accentColor: '#A8A29E',
 	},
 
 	{

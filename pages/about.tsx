@@ -19,10 +19,12 @@ const About: NextPageWithLayout = () => {
 						<Text>
 							<>
 								Hello, my name is alejandro díaz (aka{' '}
-								<span className='glitched'>rezonmain</span>) I&apos;m a{' '}
-								<b>front-end developer</b> located in tijuana 🇲🇽, I focus on
-								responsive and mobile friendly UX, with the goal to make every
-								website accessible to everyone.
+								<span className='glitched dark:text-glitched-dark'>
+									rezonmain
+								</span>
+								) I&apos;m a <b>front-end developer</b> located in tijuana 🇲🇽, I
+								focus on responsive and mobile friendly UX, with the goal to
+								make every website accessible to everyone.
 								<Pbr />I have a technical degree in <b>electronics</b> and a
 								bachelor degree in <b>bioengineering</b>, but have dedicated the
 								last 2.5 years learning web development.
@@ -113,7 +115,7 @@ const Pbr = () => (
 	</>
 );
 
-// Opt-in for the consistent layouy
+// Opt-in shared layout
 About.getLayout = function getLayout(page: ReactElement) {
 	return <ContentLayout>{page}</ContentLayout>;
 };

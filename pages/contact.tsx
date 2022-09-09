@@ -22,7 +22,7 @@ const Contact: NextPageWithLayout = () => {
 					<ul className='flex flex-col gap-10'>
 						<li>
 							<h2 className='text-2xl'>drop me an email</h2>
-							<BsEnvelopeFill className='inline mr-2 text-center text-white' />
+							<BsEnvelopeFill className='inline mr-2 text-center' />
 							<TextLink href='mailto:rez@rezonmain.dev'>
 								rez@rezonmain.dev
 							</TextLink>
@@ -51,7 +51,6 @@ const Contact: NextPageWithLayout = () => {
 	);
 };
 
-// Opt-in for the consistent layouy
 Contact.getLayout = function getLayout(page: ReactElement) {
 	return <ContentLayout>{page}</ContentLayout>;
 };

@@ -1,6 +1,5 @@
 import { BsGithub, BsGlobe } from 'react-icons/bs';
-import Image from 'next/image';
-import tech, { Tech } from '../../lib/tech';
+import { Tech } from '../../lib/tech';
 import TechIcons from '../TechIcons/TechIcons';
 
 const ProjectCard = ({
@@ -40,10 +39,10 @@ const ProjectCard = ({
 
 				<div
 					id='card-content'
-					className='bg-neutral-800 w-full h-full group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform p-4 flex flex-col gap-5 justify-between'
+					className='bg-gray-100 dark:bg-neutral-800 w-full h-full group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform p-4 flex flex-col gap-5 justify-between'
 				>
 					<h2 className='font-semibold text-2xl'>{title}</h2>
-					<p className='text-neutral-400 text-lg'>
+					<p className='text-neutral-500 dark:text-neutral-400 text-lg'>
 						{description.toLowerCase()}
 					</p>
 					<TechIcons techs={techs} />

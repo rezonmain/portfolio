@@ -47,7 +47,7 @@ const Hero = () => {
 			>
 				<h1 className='text-5xl font-light'>
 					{"hi, i'm "}
-					<span className='glitched'>rezonmain</span>
+					<span className='glitched dark:text-glitched-dark'>rezonmain</span>
 				</h1>
 				<p className='text-lg leading-10 tracking-widest font-light text-neutral-500 '>
 					front-end developer

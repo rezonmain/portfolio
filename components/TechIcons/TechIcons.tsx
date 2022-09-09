@@ -6,7 +6,7 @@ const TechIcons = ({ techs }: { techs: Tech[] }) => {
 	return (
 		<div
 			id='tech-icons'
-			className='flex flex-row flex-wrap gap-2 bg-neutral-900 w-fit p-1.5 rounded-xl'
+			className='flex flex-row flex-wrap gap-2 dark:bg-neutral-900 w-fit p-1.5 rounded-xl'
 		>
 			{techs.map((t, i) => (
 				<div key={i} className='w-[30px] h-[30px]'>
