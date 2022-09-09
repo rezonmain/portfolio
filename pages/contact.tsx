@@ -41,7 +41,7 @@ const Contact: NextPageWithLayout = () => {
 							<h2 className='text-2xl'>judge my code</h2>
 							<BsGithub className='inline mr-2' />
 							<TextLink href='https://github.com/rezonmain'>
-								gitub.com/rezonmain
+								github.com/rezonmain
 							</TextLink>
 						</li>
 					</ul>
