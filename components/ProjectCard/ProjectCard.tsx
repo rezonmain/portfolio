@@ -48,13 +48,13 @@ const ProjectCard = ({
 					<TechIcons techs={techs} />
 					<div id='links' className='flex flex-row gap-3 justify-end'>
 						<a target='_blank' rel='noreferrer' href={codeURL}>
-							<div className='p-1 rounded-full hover:scale-[1.1] transition-transform'>
+							<div className='p-1 rounded-full hover:scale-[1.1] hover:rotate-6 transition-transform'>
 								<BsGithub size={30} title='Source code' />
 							</div>
 						</a>
 						{webURL && (
 							<a target='_blank' rel='noreferrer' href={webURL}>
-								<div className='p-1 rounded-full hover:scale-[1.1] transition-transform'>
+								<div className='p-1 rounded-full hover:scale-[1.1] hover:rotate-6 transition-transform'>
 									<BsGlobe size={30} title='Website' />
 								</div>
 							</a>
