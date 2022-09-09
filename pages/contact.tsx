@@ -23,7 +23,7 @@ const Contact: NextPageWithLayout = () => {
 						<li>
 							<h2 className='text-2xl'>drop me an email</h2>
 							<BsEnvelopeFill className='inline mr-2 text-center text-white' />
-							<TextLink href='mailto:rez@rezonmin.dev'>
+							<TextLink href='mailto:rez@rezonmain.dev'>
 								rez@rezonmain.dev
 							</TextLink>
 						</li>
