@@ -18,10 +18,9 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
 	const getLayout = Component.getLayout ?? ((page) => page);
-
 	return (
 		<AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
-			<ThemeProvider attribute='class'>
+			<ThemeProvider attribute='class' defaultTheme='dark'>
 				{getLayout(<Component {...pageProps} key={router.route} />)}
 			</ThemeProvider>
 		</AnimatePresence>

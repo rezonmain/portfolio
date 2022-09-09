@@ -52,7 +52,7 @@ const Sphere = ({
 	sphere.deleteAttribute('normal');
 	sphere.deleteAttribute('uv');
 	sphere = mergeVertices(sphere) as SphereGeometry;
-	const pSize = theme === 'dark' ? 4 : 5;
+	const pSize = 4;
 
 	const spherePosition = sphere.getAttribute('position');
 	let sizes: number[] | THREE.Float32BufferAttribute = [];

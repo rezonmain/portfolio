@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion';
-import { BsGithub } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 const Footer = () => {
+	const [mounted, setMounted] = useState(false);
+	const { theme, setTheme } = useTheme();
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
 	return (
 		<motion.footer
 			initial={{ opacity: 0 }}
@@ -28,6 +35,20 @@ const Footer = () => {
 				>
 					twitter
 				</a>
+				{' | '}
+				<span>theme: </span>
+				{mounted && (
+					<select
+						value={theme}
+						onChange={(e) => setTheme(e.target.value)}
+						className='p-1 rounded-lg bg-neutral-100 dark:bg-neutral-800'
+					>
+						{' '}
+						<option value='system'>System</option>
+						<option value='dark'>Dark</option>
+						<option value='light'>Light</option>
+					</select>
+				)}
 			</small>
 		</motion.footer>
 	);
