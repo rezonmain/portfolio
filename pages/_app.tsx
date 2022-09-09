@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
 	const getLayout = Component.getLayout ?? ((page) => page);
 
 	return (
-		<AnimatePresence mode='wait'>
+		<AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
 			{getLayout(<Component {...pageProps} key={router.route} />)}
 		</AnimatePresence>
 	);

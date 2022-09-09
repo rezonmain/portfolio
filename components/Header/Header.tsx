@@ -14,7 +14,9 @@ const Header = () => {
 				className='flex flex-row justify-between items-center text-lg mx-auto px-6 sm:max-w-3xl xl:px-0 xl:max-w-5xl'
 			>
 				<div id='home-link' className='font-light hover:text-glitched'>
-					<Link href='/'>home</Link>
+					<Link scroll={false} href='/'>
+						home
+					</Link>
 				</div>
 				<Navigation as='content' />
 			</div>

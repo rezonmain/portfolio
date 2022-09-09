@@ -29,7 +29,7 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 		return (
 			<nav id='content-links' className='flex flex-row gap-5 text-center'>
 				{links.map(([title, url], i) => (
-					<Link href={url} key={i}>
+					<Link scroll={false} href={url} key={i}>
 						<a
 							className={`cursor-pointer font-extralight hover:text-glitched transition-[text-shadow] ${
 								router.route === url ? 'text-glitched' : ''
@@ -70,7 +70,7 @@ const Navigation = ({ as }: { as: 'homepage' | 'content' }) => {
 				['[ my work ]', '/work'],
 				['[ contact ]', '/contact'],
 			].map(([title, url], i) => (
-				<Link href={url} key={i}>
+				<Link scroll={false} href={url} key={i}>
 					<motion.a
 						key={i}
 						variants={item}
