@@ -2,6 +2,7 @@ import { AnimatePresence } from 'framer-motion';
 import Footer from '../Footer/Footer';
 import GoBack from '../GoBack/GoBack';
 import Header from '../Header/Header';
+import Transition from '../Transition/Transition';
 
 const ContentLayout = ({ children }: { children: JSX.Element }) => {
 	return (

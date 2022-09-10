@@ -13,6 +13,8 @@ export enum Tech {
 	trpc = 'trpc',
 	vscode = 'vscode',
 	three = 'three',
+	python = 'python',
+	redis = 'redis',
 }
 
 const tech = {
@@ -99,6 +101,18 @@ const tech = {
 		alt: 'vscode',
 		url: 'https://code.visualstudio.com/',
 		title: 'Visual studio code',
+	},
+	python: {
+		src: '/img/python.png',
+		alt: 'python',
+		url: 'https://www.python.org/',
+		title: 'Python',
+	},
+	redis: {
+		src: '/img/redis.png',
+		alt: 'redis',
+		url: 'https://redis.io/',
+		title: 'Redis',
 	},
 };
 

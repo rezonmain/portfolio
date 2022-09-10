@@ -19,10 +19,12 @@ const projects: Project[] = [
 		techs: [
 			Tech.reactjs,
 			Tech.ts,
+			Tech.python,
 			Tech.next,
 			Tech.tailwind,
 			Tech.three,
 			Tech.mongo,
+			Tech.redis,
 			Tech.trpc,
 			Tech.docker,
 		],
@@ -35,7 +37,7 @@ const projects: Project[] = [
 		description:
 			'Generate simple wordclouds from text file or text input, It uses D3.js to generate the cloud',
 		imgSrc: '/img/swc.png',
-		techs: [Tech.reactjs, Tech.next, Tech.ts, Tech.d3, Tech.tailwind],
+		techs: [Tech.reactjs, Tech.ts, Tech.next, Tech.d3, Tech.tailwind],
 		webURL: 'https://simple-wordcloud.vercel.app/',
 		codeURL: 'https://github.com/rezonmain/simple-wordcloud',
 		accentColor: '#A8A29E',
