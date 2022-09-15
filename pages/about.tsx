@@ -47,7 +47,10 @@ const About: NextPageWithLayout = () => {
 							<>
 								I use <b>vscode</b> as my text editor, my front-end framework of
 								choice is <b>react</b> which I pair it with{' '}
-								<TextLink href='https://nextjs.org/'>next.js</TextLink> for{' '}
+								<TextLink href='https://nextjs.org/'>
+									<b>next.js</b>
+								</TextLink>{' '}
+								for{' '}
 								<TextLink href='https://nextjs.org/learn/foundations/how-nextjs-works/rendering'>
 									SSR
 								</TextLink>
@@ -57,8 +60,13 @@ const About: NextPageWithLayout = () => {
 								<b>Typescript</b> is my language of choice for both front-end
 								and when I need to write a little bit of back-end code, which is
 								usually in the form of a{' '}
-								<TextLink href='https://trpc.io/'>tRPC</TextLink> api, and
-								involves a <b>mongoDB</b> database.
+								<TextLink href='https://trpc.io/'>
+									<b>tRPC</b>
+								</TextLink>{' '}
+								api, and involves a <b>mongoDB</b> database. For styling I use
+								Tailwind CSS, these technologies &#40;Typescript, tRPC,
+								Tailwind&#41; form the T3 stack popularized by{' '}
+								<TextLink href='https://twitter.com/t3dotgg'>Theo.</TextLink>
 							</>
 						</Text>
 						{/* All icons */}
