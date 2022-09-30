@@ -11,6 +11,7 @@ const nextConfig = {
 			'avatars.githubusercontent.com',
 			'cdn4.iconfinder.com',
 			'trpc.io',
+			'vitejs.dev',
 		],
 	},
 };

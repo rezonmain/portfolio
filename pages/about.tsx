@@ -18,7 +18,7 @@ const About: NextPageWithLayout = () => {
 						<Sub>about me</Sub>
 						<Text>
 							<>
-								Hello, my name is alejandro díaz (aka{' '}
+								Hello, my name is Alejandro Díaz (aka{' '}
 								<span className='glitched dark:text-glitched-dark'>
 									rezonmain
 								</span>

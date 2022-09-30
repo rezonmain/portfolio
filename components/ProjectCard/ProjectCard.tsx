@@ -5,7 +5,6 @@ import TechIcons from '../TechIcons/TechIcons';
 const ProjectCard = ({
 	title,
 	description,
-	imgSrc,
 	techs,
 	webURL,
 	codeURL,
@@ -13,7 +12,6 @@ const ProjectCard = ({
 }: {
 	title: string;
 	description: string;
-	imgSrc?: string;
 	techs: Tech[];
 	webURL?: string;
 	codeURL: string;

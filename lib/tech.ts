@@ -1,3 +1,5 @@
+import { title } from 'process';
+
 export enum Tech {
 	js = 'js',
 	css = 'css',
@@ -15,6 +17,8 @@ export enum Tech {
 	three = 'three',
 	python = 'python',
 	redis = 'redis',
+	vite = 'vite',
+	pwa = 'pwa',
 }
 
 const tech = {
@@ -113,6 +117,18 @@ const tech = {
 		alt: 'redis',
 		url: 'https://redis.io/',
 		title: 'Redis',
+	},
+	vite: {
+		src: 'https://vitejs.dev/logo.svg',
+		alt: 'vitejs',
+		url: 'https://vitejs.dev/',
+		title: 'Vitejs',
+	},
+	pwa: {
+		src: '/img/pwa.png',
+		alt: 'pwa',
+		url: 'https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps',
+		title: 'Progressive web apps',
 	},
 };
 
