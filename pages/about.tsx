@@ -23,8 +23,8 @@ const About: NextPageWithLayout = () => {
 									rezonmain
 								</span>
 								) I&apos;m a <b>front-end developer</b> located in tijuana 🇲🇽, I
-								focus on responsive and mobile friendly UX, with the goal to
-								make every website accessible to everyone.
+								focus on responsive and mobile friendly UI, with the added goal
+								to make every website easy to use and accessible to everyone.
 								<Pbr />I have a technical degree in <b>electronics</b> and a
 								bachelor degree in <b>bioengineering</b>, but have dedicated the
 								last 2.5 years learning web development.
