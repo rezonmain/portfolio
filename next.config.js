@@ -6,7 +6,7 @@ const nextConfig = {
 		domains: [
 			'raw.githubusercontent.com',
 			'upload.wikimedia.org',
-			'www.nstinfotech.com',
+			'tailwindcss.com',
 			'external-content.duckduckgo.com',
 			'avatars.githubusercontent.com',
 			'cdn4.iconfinder.com',
