@@ -14,7 +14,7 @@ const Work: NextPageWithLayout = () => {
 			</Head>
 			<Transition>
 				<>
-					<ProjectsSection title='as a profesional' projects={projects.filter((p) => p.section === 'pro')} />
+					<ProjectsSection title='as a professional' projects={projects.filter((p) => p.section === 'pro')} />
 					<ProjectsSection title='competent' projects={projects.filter((p) => p.section === 'competent')} />
 					<ProjectsSection title='learning' projects={projects.filter((p) => p.section === 'learning')} />
 					<ProjectsSection title='baby steps' projects={projects.filter((p) => p.section === 'baby')} />
