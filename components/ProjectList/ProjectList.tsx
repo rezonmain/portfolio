@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import projects from '../../lib/projects';
+import type { Project } from '../../lib/projects';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
-const ProjectList = () => {
+const ProjectList = ({projects}: {projects: Project[]}) => {
 	return (
 		<section id='my-work'>
 			<motion.div
