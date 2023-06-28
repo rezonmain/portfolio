@@ -20,6 +20,7 @@ export enum Tech {
   vite = "vite",
   pwa = "pwa",
   puppeteer = "puppeteer",
+  sqlite = "sqlite",
 }
 
 const tech = {
@@ -136,6 +137,12 @@ const tech = {
     alt: "puppeteer",
     url: "https://pptr.dev/",
     title: "Puppeteer",
+  },
+  sqlite: {
+    src: "https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg",
+    alt: "sqlite",
+    url: "https://www.sqlite.org/index.html",
+    title: "SQLite",
   },
 };
 

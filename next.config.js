@@ -12,7 +12,7 @@ const nextConfig = {
 			'cdn4.iconfinder.com',
 			'trpc.io',
 			'vitejs.dev',
-			'user-images.githubusercontent.com'
+			'user-images.githubusercontent.com',
 		],
 	},
 };
