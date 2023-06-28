@@ -19,6 +19,7 @@ export enum Tech {
   redis = "redis",
   vite = "vite",
   pwa = "pwa",
+  puppeteer = "puppeteer",
 }
 
 const tech = {
@@ -129,6 +130,12 @@ const tech = {
     alt: "pwa",
     url: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps",
     title: "Progressive web apps",
+  },
+  puppeteer: {
+    src: "https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png",
+    alt: "puppeteer",
+    url: "https://pptr.dev/",
+    title: "Puppeteer",
   },
 };
 
