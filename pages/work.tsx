@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import { ReactElement } from 'react';
 import ContentLayout from '../components/ContentLayout/ContentLayout';
-import ProjectList from '../components/ProjectList/ProjectList';
 import Transition from '../components/Transition/Transition';
 import { NextPageWithLayout } from './_app';
+import ProjectsSection from '../components/ProjectsSection/ProjectsSection';
+import projects from '../lib/projects';
 
 const Work: NextPageWithLayout = () => {
 	return (
@@ -12,7 +13,12 @@ const Work: NextPageWithLayout = () => {
 				<title>rezonmain | work</title>
 			</Head>
 			<Transition>
-				<ProjectList />
+				<>
+					<ProjectsSection title='as a profesional' projects={projects.filter((p) => p.section === 'pro')} />
+					<ProjectsSection title='competent' projects={projects.filter((p) => p.section === 'competent')} />
+					<ProjectsSection title='learning' projects={projects.filter((p) => p.section === 'learning')} />
+					<ProjectsSection title='baby steps' projects={projects.filter((p) => p.section === 'baby')} />
+				</>
 			</Transition>
 		</>
 	);
