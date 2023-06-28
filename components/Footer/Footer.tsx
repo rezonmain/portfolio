@@ -16,7 +16,7 @@ const Footer = () => {
 			exit={{ opacity: 0 }}
 			className='text-center mt-3 mb-10 flex flex-col items-center'
 		>
-			<small>&copy; 2022 made with 💝 by rezonmain</small>
+			<small>&copy; {new Date().getFullYear()} made with 💝 by rezonmain</small>
 			<small className='mt-1'>
 				<a
 					target='_blank'
