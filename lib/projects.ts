@@ -7,7 +7,10 @@ export type Project = {
   webURL?: string;
   codeURL: string;
   accentColor: string;
+  section: ProjectSections;
 };
+
+export type ProjectSections = "baby" | "learning" | "competent" | "pro";
 
 const projects: Project[] = [
   {
@@ -17,6 +20,7 @@ const projects: Project[] = [
     techs: [Tech.ts, Tech.redis, Tech.docker, Tech.puppeteer, Tech.sqlite],
     codeURL: "https://github.com/rezonmain/scared-ape",
     accentColor: "#00D9A2",
+    section: "pro",
   },
   {
     title: "nertu app",
@@ -26,6 +30,7 @@ const projects: Project[] = [
     webURL: "https://nertu.app/",
     codeURL: "https://github.com/rezonmain/nertu",
     accentColor: "#c026d3",
+    section: "competent",
   },
   {
     title: "minecraft server scanner",
@@ -46,6 +51,7 @@ const projects: Project[] = [
     webURL: "https://mc-server-scanner.vercel.app/",
     codeURL: "https://github.com/rezonmain/mc-server-scanner",
     accentColor: "#17A34A",
+    section: "competent",
   },
   {
     title: "simple word clouds",
@@ -55,6 +61,7 @@ const projects: Project[] = [
     webURL: "https://simple-wordcloud.vercel.app/",
     codeURL: "https://github.com/rezonmain/simple-wordcloud",
     accentColor: "#A8A29E",
+    section: "learning",
   },
 
   {
@@ -64,6 +71,7 @@ const projects: Project[] = [
     webURL: "https://rezonmain.github.io/command-line-typetest/",
     codeURL: "https://github.com/rezonmain/command-line-typetest",
     accentColor: "#1C8394",
+    section: "learning",
   },
   {
     title: "react games",
@@ -72,6 +80,7 @@ const projects: Project[] = [
     webURL: "https://react-games-two.vercel.app/",
     codeURL: "https://github.com/rezonmain/react-games",
     accentColor: "#FACC15",
+    section: "learning",
   },
   {
     title: "red wagon",
@@ -80,6 +89,7 @@ const projects: Project[] = [
     webURL: "https://rezonmain.github.io/redwagon/",
     codeURL: "https://github.com/rezonmain/redwagon",
     accentColor: "#E0312F",
+    section: "baby",
   },
   {
     title: "minesweeper for excel",
@@ -89,6 +99,7 @@ const projects: Project[] = [
     webURL: "",
     codeURL: "https://github.com/rezonmain/minesweeper-for-excel",
     accentColor: "#0100FE",
+    section: "baby",
   },
 ];
 
