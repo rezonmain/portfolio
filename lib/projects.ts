@@ -16,11 +16,24 @@ const projects: Project[] = [
   {
     title: "scared ape 🦍",
     description:
-      "manage multiple web scrapers, get notified via telegram when data changes (wip)",
-    techs: [Tech.ts, Tech.redis, Tech.docker, Tech.puppeteer, Tech.sqlite],
+      "manage multiple web scrapers, view scraped data as widgets or get notified via telegram when data changes (wip)",
+    techs: [
+      Tech.ts,
+      Tech.aws,
+      Tech.jwt,
+      Tech.telegram,
+      Tech.redis,
+      Tech.docker,
+      Tech.puppeteer,
+      Tech.sqlite,
+      Tech.vite,
+      Tech.tailwind,
+      Tech.react_router,
+    ],
     codeURL: "https://github.com/rezonmain/scared-ape",
     accentColor: "#00D9A2",
     section: "pro",
+    webURL: "https://apeq.app",
   },
   {
     title: "nertu app",
