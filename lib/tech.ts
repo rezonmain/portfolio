@@ -21,6 +21,10 @@ export enum Tech {
   pwa = "pwa",
   puppeteer = "puppeteer",
   sqlite = "sqlite",
+  telegram = "telegram",
+  aws = "aws",
+  react_router = "react_router",
+  jwt = "jwt",
 }
 
 const tech = {
@@ -143,6 +147,30 @@ const tech = {
     alt: "sqlite",
     url: "https://www.sqlite.org/index.html",
     title: "SQLite",
+  },
+  telegram: {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png",
+    alt: "telegram",
+    url: "https://core.telegram.org/bots/api",
+    title: "Telegram API",
+  },
+  aws: {
+    src: "https://rbytes.pl/wp-content/uploads/elementor/thumbs/AWS-SQUARE-LOGO-ooyojhjwm467vmop8bkc1txy3otie23bdajmdx964k.png",
+    alt: "aws",
+    url: "https://aws.amazon.com/",
+    title: "Amazon Web Services",
+  },
+  react_router: {
+    src: "https://mrbing47.github.io/img/logos/react-router.png",
+    alt: "react router",
+    url: "https://reactrouter.com/",
+    title: "React Router",
+  },
+  jwt: {
+    src: "https://jwt.io/img/pic_logo.svg",
+    alt: "jwt",
+    url: "https://jwt.io/",
+    title: "JSON Web Tokens",
   },
 };
 
