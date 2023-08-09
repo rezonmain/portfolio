@@ -4,12 +4,7 @@ import ContentLayout from "../components/ContentLayout/ContentLayout";
 import Transition from "../components/Transition/Transition";
 import { TextLink } from "./about";
 import { NextPageWithLayout } from "./_app";
-import {
-  BsEnvelopeFill,
-  BsGithub,
-  BsTelegram,
-  BsTwitter,
-} from "react-icons/bs";
+import { BsEnvelopeFill, BsGithub, BsTelegram } from "react-icons/bs";
 
 const Contact: NextPageWithLayout = () => {
   return (
