@@ -50,7 +50,7 @@ const Hero = () => {
 					<span className='glitched dark:text-glitched-dark'>rezonmain</span>
 				</h1>
 				<p className='text-lg leading-10 tracking-widest font-light text-neutral-500 '>
-					front-end developer
+					software engineer
 				</p>
 			</motion.div>
 			<Navigation as='homepage' />
