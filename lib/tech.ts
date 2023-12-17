@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export enum Tech {
   js = "js",
   css = "css",
@@ -25,6 +23,11 @@ export enum Tech {
   aws = "aws",
   react_router = "react_router",
   jwt = "jwt",
+  nestjs = "nestjs",
+  redux = "redux",
+  testinglibrary = "testinglibrary",
+  jest = "jest",
+  postgres = "postgres",
 }
 
 const tech = {
@@ -171,6 +174,36 @@ const tech = {
     alt: "jwt",
     url: "https://jwt.io/",
     title: "JSON Web Tokens",
+  },
+  nestjs: {
+    src: "https://nestjs.com/img/logo_text.svg",
+    alt: "nestjs",
+    url: "https://nestjs.com/",
+    title: "NestJS",
+  },
+  redux: {
+    src: "https://vectorified.com/images/redux-icon-21.png",
+    alt: "redux",
+    url: "https://redux.js.org/",
+    title: "Redux",
+  },
+  testinglibrary: {
+    src: "https://testing-library.com/img/octopus-64x64.png",
+    alt: "testing library",
+    url: "https://testing-library.com/",
+    title: "Testing Library",
+  },
+  jest: {
+    src: "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
+    alt: "jest",
+    url: "https://jestjs.io/",
+    title: "Jest",
+  },
+  postgres: {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+    alt: "postgres",
+    url: "https://www.postgresql.org/",
+    title: "PostgreSQL",
   },
 };
 

@@ -16,6 +16,10 @@ const nextConfig = {
       "rbytes.pl",
       "mrbing47.github.io",
       "jwt.io",
+      "nestjs.com",
+      "vectorified.com",
+      "testing-library.com",
+      "cdn.freebiesupply.com",
     ],
   },
 };
