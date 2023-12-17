@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 import ContentLayout from "../components/ContentLayout/ContentLayout";
 import TechIcons from "../components/TechIcons/TechIcons";
 import Transition from "../components/Transition/Transition";
@@ -23,48 +23,48 @@ const About: NextPageWithLayout = () => {
                   rezonmain
                 </span>
                 ) I&apos;m a <b>software engineer</b> located in tijuana 🇲🇽, I
-                focus on front-end development making responsive and mobile
-                friendly webapps.
+                make all kinds of web apps.
                 <Pbr />I have a technical degree in <b>electronics</b> and a
                 bachelor degree in <b>bioengineering</b>, but have dedicated the
-                last 5 years learning (and working in) everything web
+                last 6 years learning (and working in) everything web
                 development.
               </>
             </Text>
           </article>
           <article>
             <Sub>work xp</Sub>
-            <Text>
-              <ul className="list-disc">
-                <li className="ml-8">
+            <ul className="list-disc">
+              <li className="ml-8">
+                <Text>
                   React developer @{" "}
                   <TextLink href="https://www.arkusnexus.com/">
                     ArkusNexus
                   </TextLink>{" "}
                   🤓
-                </li>
-                <li className="ml-8">
+                </Text>
+              </li>
+              <li className="ml-8">
+                <Text>
                   Engineer @{" "}
                   <TextLink href="https://drata.com/">Drata</TextLink> 😎
-                </li>
-              </ul>
-            </Text>
+                </Text>
+              </li>
+            </ul>
           </article>
           <article>
             <Sub>stack</Sub>
             <Text>
               <>
                 <strong>Typescript</strong> is my main language, and I know{" "}
-                <strong>React</strong> like the back of my hand, but of course I
-                sometimes cheat on it with Vue and Svelte, Next.js is the
-                framework I have most experience in but I&apos;ve built webapps
-                using the most popular JS libraries and frameworks, I love tech
-                and I love trying out the newest and latest tools out there,
-                just for fun.
+                <strong>React</strong> like the back of my hand but I&apos;ve
+                built web apps using the most popular JS libraries and
+                frameworks, I love tech and I love trying out the newest and
+                latest tools out there, just for fun.
               </>
             </Text>
             {/* All icons */}
             <br />
+            <Sub>tech i&apos;ve worked with</Sub>
             <TechIcons techs={Object.values(Tech)} />
           </article>
         </section>
@@ -87,7 +87,7 @@ export const Sub = ({
   );
 };
 
-export const Text = ({ children }: { children: string | JSX.Element }) => {
+export const Text = ({ children }: { children: ReactNode }) => {
   return <p className="text-xl font-extralight">{children}</p>;
 };
 
